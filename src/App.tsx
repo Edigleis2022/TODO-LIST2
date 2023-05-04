@@ -1,6 +1,6 @@
-import { ThemeProvider, createTheme, tY } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Toolbar, Typography } from '../node_modules/@mui/material/index';
+import { AppBar, Button, Container, Grid, TextField, Toolbar, Typography, useTheme } from '../node_modules/@mui/material/index';
 
 const darkTheme = createTheme({
   palette: {
@@ -26,10 +26,23 @@ const theme = useTheme();
               minHeight: 200,
             }
         }} >
-          <Typography variant="h5" componet="h1">Todo</Typography>
+          <Typography variant="h5" componet="h1">
+            Todo
+          </Typography>
         </Toolbar>
       </AppBar>
-      <main>Todo list</main>
+      <main>
+         <Container>
+        <Grid container spacing={theme.spacing(0.5)} >
+              <Grid item xl={6} sm={12}>
+                  <TextField name='task' fullWidth/>
+              </Grid>
+              <Grid xl={6} sm={12}>
+                 <Button variant="contained">Criar</Button>
+              </Grid>
+        </Grid>
+        </Container>
+      </main>
     </ThemeProvider>
     </>
   );
