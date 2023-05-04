@@ -15,9 +15,16 @@ const theme = useTheme();
      <>
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar sx={{
-
+            paddingTop:theme.spacing(2),
+            paddingBottom:theme.spacing(2),
+            display:"flex",
+            justifyContent:'cente',
+            alignItem:'center',
+            '@media all': {
+              minHeight: 200,
+            }
         }} >
           <Typography variant="h5" componet="h1">Todo</Typography>
         </Toolbar>
