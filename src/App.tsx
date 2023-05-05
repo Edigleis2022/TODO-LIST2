@@ -1,6 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Button, Container, Grid, TextField, Toolbar, Typography, useTheme } from '../node_modules/@mui/material/index';
+import { AppBar, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
 
 const darkTheme = createTheme({
   palette: {
@@ -32,13 +32,22 @@ function App() {
           </Toolbar>
         </AppBar>
         <main>
-          <Container>
-            <Grid container spacing={theme.spacing(0.5)} >
-              <Grid item xl={6} sm={12}>
-                <TextField name='task' fullWidth />
+        <Container sx={{
+          position:'relative'
+        }}>
+            <Grid container spacing={theme.spacing(0.5)} sx={{
+              position: 'absolute',
+              top: '-27'
+            }}>
+              <Grid item xl={10} sm={12}>
+                <TextField  variant='outlined' name='task' fullWidth sx={{
+                  backgroundColor:colors.grey[800]
+                }} />
               </Grid>
               <Grid  item xl={6} sm={12}>
-                <Button variant="contained" fullWidth >Criar</Button>
+                <Button variant="contained" fullWidth sx={{
+                  height:'100%'
+                }}>Criar</Button>
               </Grid>
             </Grid>
           </Container>
