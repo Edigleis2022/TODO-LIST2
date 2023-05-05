@@ -1,6 +1,8 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
+import { AppBar, Badge, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
+import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
+import { CheckFat } from '@phosphor-icons/react';
 
 const darkTheme = createTheme({
   palette: {
@@ -26,28 +28,52 @@ function App() {
               minHeight: 200,
             }
           }} >
-            <Typography variant="h5" component="h1" >
-              Todo
+            <Typography variant="h5" component="h1" sx={{
+              display:'flex',
+              alignItems:'center',
+              gap:theme.spacing(2),
+              color:theme.palette.primary.light
+
+            }} >
+              <CheckFat size={32} weight='fill'/> Lista de Tarefas
             </Typography>
           </Toolbar>
         </AppBar>
         <main>
         <Container sx={{
           position:'relative'
+
         }}>
             <Grid container spacing={theme.spacing(0.5)} sx={{
               position: 'absolute',
               top: '-27'
             }}>
               <Grid item xl={10} sm={12}>
-                <TextField  variant='outlined' name='task' fullWidth sx={{
+                <TextField  
+                variant='outlined' 
+                name='task' fullWidth 
+                
+                sx={{
                   backgroundColor:colors.grey[800]
                 }} />
               </Grid>
               <Grid  item xl={6} sm={12}>
                 <Button variant="contained" fullWidth sx={{
                   height:'100%'
-                }}>Criar</Button>
+                }}> 
+                <span>Criar </span><PlusCircle size={32}/> 
+                </Button>
+              </Grid>
+            </Grid>
+            <Grid container spacing={theme.spacing(1)} >
+              <Grid item >
+                <Typography variant='caption' sx={{
+                  display:'flex',
+                  alignItems:'center'
+                }} >
+                  <span>Tarefas Criadas</span>
+                  <Badge color='primary' badgeContent={0} showZero />
+                </Typography>
               </Grid>
             </Grid>
           </Container>
