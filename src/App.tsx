@@ -57,7 +57,7 @@ function App() {
                   backgroundColor:colors.grey[800]
                 }} />
               </Grid>
-              <Grid  item xl={6} sm={12}>
+              <Grid  item xl={2} sm={12}>
                 <Button variant="contained" fullWidth sx={{
                   height:'100%'
                 }}> 
