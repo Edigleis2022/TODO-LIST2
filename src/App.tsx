@@ -39,6 +39,8 @@ function App() {
             </Typography>
           </Toolbar>
         </AppBar>
+
+
         <main>
         <Container sx={{
           position:'relative'
@@ -50,6 +52,7 @@ function App() {
             }}>
               <Grid item xl={10} sm={12}>
                 <TextField  
+                placeholder='Adicione uma nova tarefa'
                 variant='outlined' 
                 name='task' fullWidth 
                 
@@ -57,6 +60,7 @@ function App() {
                   backgroundColor:colors.grey[800]
                 }} />
               </Grid>
+
               <Grid  item xl={2} sm={12}>
                 <Button variant="contained" fullWidth sx={{
                   height:'100%'
@@ -64,18 +68,28 @@ function App() {
                 <span>Criar </span><PlusCircle size={32}/> 
                 </Button>
               </Grid>
-            </Grid>
-            <Grid container spacing={theme.spacing(1)} >
+
+            
+
+            <Grid container spacing={theme.spacing(1)} sx={{
+              marginTop: '25px'
+            }} >
               <Grid item >
                 <Typography variant='caption' sx={{
                   display:'flex',
-                  alignItems:'center'
+                  alignItems:'center',
+                  gap: theme.spacing(2),
+                  paddingLeft: '5px'
                 }} >
                   <span>Tarefas Criadas</span>
-                  <Badge color='primary' badgeContent={0} showZero />
+                  <Badge color='primary' badgeContent={0} showZero></Badge> 
                 </Typography>
               </Grid>
+
             </Grid>
+            </Grid>
+
+
           </Container>
         </main>
       </ThemeProvider>
