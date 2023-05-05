@@ -22,7 +22,7 @@ function App() {
             paddingTop: theme.spacing(2),
             paddingBottom: theme.spacing(2),
             display: "flex",
-            justifyContent: 'cente',
+            justifyContent: 'center',
             alignItem: 'center',
             '@media all': {
               minHeight: 200,
