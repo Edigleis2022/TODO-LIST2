@@ -48,7 +48,7 @@ function App() {
           }}>
             <Grid container spacing={theme.spacing(0.5)} sx={{
               position: 'absolute',
-              top: '-27'
+              top: '-27px'
             }}>
               <Grid item xl={10} sm={12}>
                 <TextField
@@ -65,11 +65,9 @@ function App() {
                 <Button variant="contained" fullWidth sx={{
                   height: '100%'
                 }}>
-                  <span>Criar </span><PlusCircle size={32} />
+                  <span> Criar </span><PlusCircle size={32} />
                 </Button>
               </Grid>
-
-
 
               <Grid container spacing={theme.spacing(1)} sx={{
                 marginTop: '25px'
