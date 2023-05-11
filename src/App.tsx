@@ -4,9 +4,6 @@ import { AppBar, Badge, Button, Container, Grid, TextField, Toolbar, Typography,
 import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
 import { CheckFat } from '@phosphor-icons/react';
 
-
-
-
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
@@ -14,6 +11,8 @@ const darkTheme = createTheme({
 });
 
 function App() {
+  
+
   const theme = useTheme();
   
   return (
@@ -43,8 +42,7 @@ function App() {
             </Typography>
           </Toolbar>
         </AppBar>
-
-
+        
         <main>
           <Container sx={{
             position: 'relative'
@@ -76,14 +74,14 @@ function App() {
               <Grid container spacing={theme.spacing(1)} sx={{
                 marginTop: '25px'
               }} >
-                <Grid item >
+                <Grid item xl={12} sm={11} >
                   <Typography variant='caption' sx={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: theme.spacing(2),
                     paddingLeft: '5px'
                   }} >
-                    <span>Tarefas Criadas</span>
+                    <span><h3>Tarefas Criadas</h3></span>
                     <Badge color='primary' badgeContent={0} showZero></Badge>
                   </Typography>
                 </Grid>
