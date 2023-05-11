@@ -1,10 +1,9 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Badge, Button, Container, Grid, List, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
+import { AppBar, Badge, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
 import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
 import { CheckFat } from '@phosphor-icons/react';
-import { List, ListItem, ListItemIcon, Checkbox, ListItemText } from '@material-ui/core';
-import { useState } from 'react';
+
 
 
 
@@ -16,21 +15,7 @@ const darkTheme = createTheme({
 
 function App() {
   const theme = useTheme();
-  const [tasks, setTasks] = useState([]);
-  const addTask = (task: string) => {
-    setTasks([...tasks, task]);
-  };
-
-  const [newTask, setNewTask] = useState('');
-
-  const handleSubmit = (escrever) => {
-    escrever.preventDefault();
-    addTask(newTask);
-    setNewTask('');
-  };
-
-
-
+  
   return (
 
     <>
@@ -109,33 +94,6 @@ function App() {
 
           </Container>
         </main>
-        <main>
-          <Container>
-            <Grid>
-              <List>
-                {tasks.map((task, index) => (
-                  <ListItem key={index} dense button>
-                    <ListItemIcon>
-                      <Checkbox />
-                    </ListItemIcon>
-                    <ListItemText primary={task} />
-                  </ListItem>
-                ))}
-              </List>
-              <form onSubmit={handleSubmit}>
-                <TextField
-                  label="Nova Tarefa"
-                  value={newTask}
-                  onChange={(e) => setNewTask(e.target.value)}
-                />
-                <Button type="submit" variant="contained" color="primary">
-                  Adicionar
-                </Button>
-              </form>
-            </Grid>
-          </Container>
-        </main>
-
       </ThemeProvider >
     </>
   );
