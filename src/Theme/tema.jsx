@@ -1,12 +1,14 @@
 import { CheckFat } from '@phosphor-icons/react';
 
 function TemaAbertura() {
+
+
     return (
         <>
             <AppBar position='static'>
                 <Toolbar sx={{
                     paddingTop: theme.spacing(2),
-                    paddingBottom: theme.spacing(2),
+                    paddingBottom: theme.spacing(2),               
                     display: "flex",
                     justifyContent: 'center',
                     alignItem: 'center',
