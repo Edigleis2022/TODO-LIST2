@@ -2,13 +2,14 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Badge, Button, Container, Grid, TextField, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
 import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
-import { TemaAbertura } from "./Theme/                ";
+import { TemaAbertura } from "./Theme";
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
   },
 });
+
 
 function App() {
   
