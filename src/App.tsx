@@ -1,8 +1,8 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Badge, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
+import { Badge, Button, Container, Grid, TextField, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
 import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
-import { CheckFat } from '@phosphor-icons/react';
+import { TemaAbertura } from '../src/components/Theme'
 
 const darkTheme = createTheme({
   palette: {
@@ -20,28 +20,7 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <AppBar position='static'>
-          <Toolbar sx={{
-            paddingTop: theme.spacing(2),
-            paddingBottom: theme.spacing(2),
-            display: "flex",
-            justifyContent: 'center',
-            alignItem: 'center',
-            '@media all': {
-              minHeight: 200,
-            }
-          }} >
-            <Typography variant="h5" component="h1" sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: theme.spacing(2),
-              color: theme.palette.primary.light
-
-            }} >
-              <CheckFat size={32} weight='fill' /> Lista de Tarefas
-            </Typography>
-          </Toolbar>
-        </AppBar>
+        <Tema/>
         
         <main>
           <Container sx={{
@@ -74,7 +53,7 @@ function App() {
               <Grid container spacing={theme.spacing(1)} sx={{
                 marginTop: '25px'
               }} >
-                <Grid item xl={12} sm={11} >
+                <Grid item>
                   <Typography variant='caption' sx={{
                     display: 'flex',
                     alignItems: 'center',
