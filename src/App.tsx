@@ -1,4 +1,4 @@
-import { CheckFat } from '@phosphor-icons/react';
+import { AlignLeft, CheckFat, CheckSquare } from '@phosphor-icons/react';
 import { AppBar, Badge, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
 import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
 
@@ -11,27 +11,28 @@ function App() {
   return (
 
     <>
-      <AppBar position="static">
+      <AppBar position='static'>
         <Toolbar sx={{
           paddingTop: theme.spacing(2),
           paddingBottom: theme.spacing(2),
           display: "flex",
           justifyContent: 'center',
-          alignItems: 'center',
+          alignItem: 'center',
           '@media all': {
             minHeight: 200,
           }
-
-        }}>
+        }} >
           <Typography variant="h5" component="h1" sx={{
             display: 'flex',
             alignItems: 'center',
             gap: theme.spacing(2),
             color: theme.palette.primary.light
-          }}><CheckFat size={32} weight='fill' /><span> Lista de Tarefas</span>
+
+          }} >
+            <CheckFat size={32} weight='fill' /> Lista de Tarefas
           </Typography>
         </Toolbar>
-      </AppBar >
+      </AppBar>
 
       <main>
         <Container sx={{
@@ -57,7 +58,7 @@ function App() {
               <Button variant="contained" fullWidth sx={{
                 height: '100%'
               }}>
-                <span> Criar </span><PlusCircle size={32} />
+                <span>Criar</span><PlusCircle size={32} />
               </Button>
             </Grid>
 
@@ -77,6 +78,14 @@ function App() {
               </Grid>
 
             </Grid>
+
+          </Grid>
+          <Grid sx={{
+            position:'absolute',
+            AlignItems: ''
+          }} >
+
+            <CheckSquare size={42} color="#dc5e09" />
 
           </Grid>
 
