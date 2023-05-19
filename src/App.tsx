@@ -1,5 +1,5 @@
-import { AlignLeft, CheckFat, CheckSquare } from '@phosphor-icons/react';
-import { AppBar, Badge, Button, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
+import { CheckFat } from '@phosphor-icons/react';
+import { AppBar, Badge, Button, Card, CardActionArea, CardActions, CardContent, Container, Grid, TextField, Toolbar, Typography, colors, useTheme } from '../node_modules/@mui/material/index';
 import PlusCircle from '@phosphor-icons/react/dist/icons/PlusCircle';
 
 
@@ -80,14 +80,24 @@ function App() {
             </Grid>
 
           </Grid>
-          <Grid sx={{
-            position:'absolute',
-            AlignItems: ''
-          }} >
 
-            <CheckSquare size={42} color="#dc5e09" />
+          <Card  sx={{ maxWidth: 550,
 
-          </Grid>
+          }}>
+          <TextField
+              placeholder='Nova Tarefa'
+              variant='outlined'
+              name='task' fullWidth
+
+              sx={{
+                backgroundColor: colors.grey[800]
+              }} />
+            <CardActions>
+              <Button size="small" color="primary">
+                Excluir Tarefa
+              </Button>
+            </CardActions>
+          </Card>
 
         </Container>
       </main>
