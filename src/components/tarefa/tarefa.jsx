@@ -31,6 +31,7 @@ function TarefaLayout() {
                 ))}
 
                 <form onSubmit={handleSubmit}>
+                    
                     <TextField
                         label="Nova Tarefa"
                         value={newTask}
@@ -39,10 +40,10 @@ function TarefaLayout() {
                     <Button type="submit" variant="contained" color="primary">
                         Adicionar
                     </Button>
+
                 </form>
+
             </List>
-
-
 
         </>
     )

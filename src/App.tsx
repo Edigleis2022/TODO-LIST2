@@ -90,13 +90,20 @@ function App() {
               name='task' fullWidth
 
               sx={{
-                backgroundColor: colors.grey[800]
+                backgroundColor: colors.grey[800],
+                position: 'relative',
+                top: '60px',
+                margin: '50px'
               }} />
+
             <CardActions>
+
               <Button size="small" color="primary">
                 Excluir Tarefa
               </Button>
+
             </CardActions>
+            
           </Card>
 
         </Container>
